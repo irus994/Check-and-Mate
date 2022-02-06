@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="play.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Check & Mate - Играть</title>
+</head>
+<body class="body">
+    <div class="main-wrapper main-wrapper--play">
+    <header class="page-header">
+        <nav class="page-header__nav">
+            <a href="/" class="logo">
+                <img class="logo__img" src="img/shape.svg" alt="Лого">
+                <img src="img/Check%20&%20Mate.svg" alt="Текст-лого">
+            </a>
+            <ul class="page-header__nav-list">
+                <li class="page-header__nav-item"><a class="page-header__nav-link page-header__nav-link--active" href="#">Игра</a></li>
+                <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">История</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main main-play">
+        <div class="background-wrapper">
+            <div class="background-ellipse-3 background-ellipse-3--play-left" ></div>
+            <div class="background-ellipse-3 background-ellipse-3--play-right" ></div>
+            <div class="background-ellipse-1 background-ellipse-1--play-right"></div>
+            <div class="background-ellipse-1 background-ellipse-1--play-left"></div>
+            <div class="background-ellipse-2 background-ellipse-2--play-left"></div>
+            <div class="background-ellipse-2 background-ellipse-2--play-right"></div>
+        </div>
+        <div class="players">
+            <div class="players__player players__player--black">
+                <div class="players__color-icon players__color-icon--black"></div>
+                <div class="players__user-data">
+                    <p class="players__name">Екатерина Иванцова</p>
+                    <p class="players__rating">2431</p>
+                </div>
+                <p class="players__time">25:13</p>
+            </div>
+            <div class="players__player players__player--white">
+                <div class="players__color-icon players__color-icon--white"></div>
+                <div class="players__user-data">
+                    <p class="players__name">Владимир Колесников</p>
+                    <p class="players__rating">3871</p>
+                </div>
+                <p class="players__time">23:15</p>
+            </div>
+        </div>
+        <div class="chess-board"></div>
+        <div class="game-data-wrapper">
+            <table class="chess-moves">
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">1</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>d4</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"></span>f6</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">2</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>c4</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>e6</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"></span>c3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>b4</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">4</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>c2</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>c5</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">5</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>dxc5</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>a5</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">6</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>d2</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>xc5</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">7</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>e3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>d5</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">8</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>a3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>xc3</td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number">9</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number"></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number"></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number"></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number"></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+                <tr class="chess-moves__row">
+                    <td class="chess-moves__td chess-moves__td--number"></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span></td>
+                </tr>
+            </table>
+            <div class="impossible-move">
+                <p class="impossible-move__text">Невозможный ход</p>
+            </div>
+            <div class="game-data">
+                <button class="game-data__button game-data__button--flag"></button>
+                <button class="game-data__button game-data__button--score"></button>
+                <button class="game-data__button game-data__button--back"></button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span class="footer__text">Chess&Mate © 2021 Все права защищены</span>
+        <span class="footer__text"><a class="footer__link" href="#">Политика конфиденциальности</a></span>
+    </footer>
+
+</div>
+</body>
+</html>
