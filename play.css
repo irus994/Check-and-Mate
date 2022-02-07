@@ -72,8 +72,6 @@
     background-image: url("img/piece-king-white.svg");
 }
 
-
-
 .chess-board__td-number {
     display: inline-block;
     position: absolute;
@@ -175,22 +173,29 @@
     position: relative;
 }
 
+.chess-moves-wrapper {
+    max-width: 270px;
+    max-height: 392px;
+    margin-bottom: 10px;
+    overflow: scroll;
+}
+
 .chess-moves {
     width: 270px;
     height: 392px;
     border-collapse: collapse;
-    margin-bottom: 10px;
     background-color: rgba(11, 15, 23, 0.5);
 }
 
 .chess-moves__td {
     border-left: 1px solid rgba(235, 235, 235, 0.10);
-    height: 18px;
+    height: 20px;
     width: 118px;
-    padding: 2px 0 0 12px;
+    padding: 2px 4px 2px 12px;
     box-sizing: border-box;
-    margin: 2px 0
+    margin: 2px 0;
 }
+
 .chess-moves__td--number {
     width: 34px;
 }
@@ -235,14 +240,13 @@
     box-sizing: border-box;
     padding: 20px 15px;
     margin-bottom: 15px;
+    overflow: scroll;
 }
 
 .impossible-move__text {
-    display: flex;
-    align-items: baseline;
-    line-height: 88px;
     font-size: 16px;
     font-weight: 400;
+    vertical-align: bottom;
 }
 
 .game-data {
@@ -259,6 +263,13 @@
     padding: 0;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.game-data__button:hover {
+    border: 1px solid rgba(35, 100, 226, 0.6);
+}
+.game-data__button:active {
+    border: 1px solid #0b64e2;;
 }
 
 .game-data__button:first-child {
