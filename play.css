@@ -232,7 +232,7 @@
     margin-right: 4px;
 }
 
-.chat {
+.impossible-move {
     height: 98px;
     width: 270px;
     border: rgba(235, 235, 235, 0.2) 1px solid;
@@ -247,7 +247,7 @@
 
 }
 
-.chat__text {
+.impossible-move__text {
     font-size: 16px;
     font-weight: 400;
     margin: 0;
