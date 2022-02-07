@@ -232,21 +232,25 @@
     margin-right: 4px;
 }
 
-.impossible-move {
+.chat {
     height: 98px;
     width: 270px;
     border: rgba(235, 235, 235, 0.2) 1px solid;
     background-color: rgba(11, 15, 23, 0.5);
     box-sizing: border-box;
-    padding: 20px 15px;
+    padding: 15px 15px;
     margin-bottom: 15px;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
 }
 
-.impossible-move__text {
+.chat__text {
     font-size: 16px;
     font-weight: 400;
-    vertical-align: bottom;
+    margin: 0;
 }
 
 .game-data {
@@ -267,9 +271,10 @@
 
 .game-data__button:hover {
     border: 1px solid rgba(35, 100, 226, 0.6);
+    transition: .1s linear;
 }
 .game-data__button:active {
-    border: 1px solid #0b64e2;;
+    border: 1px solid #0b64e2;
 }
 
 .game-data__button:first-child {

@@ -52,6 +52,7 @@
 
 .page-header__nav-link:hover {
     color: rgba(235, 235, 235, 0.6);
+    transition: .1s linear;
 }
 
 .page-header__nav-link:active {
@@ -141,6 +142,7 @@
 .form__input:hover,
 .form__input:active {
     border: rgba(235, 235, 235, 0.6) 1px solid;
+    transition: .1s linear;
 }
 
 .form__label {
@@ -162,6 +164,7 @@
 
 .button:hover {
     background-color: rgba(35, 100, 226, 0.6);
+    transition: .1s linear;
 }
 
 .main-img {
@@ -280,6 +283,7 @@
 
 .footer__link:hover {
     color: rgba(235, 235, 235, 0.6);
+    transition: .1s linear;
 }
 
 .footer__link:active {
