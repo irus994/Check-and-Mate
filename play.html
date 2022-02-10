@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="play.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,19 +10,20 @@
 </head>
 <body class="body">
     <div class="main-wrapper main-wrapper--play">
-    <header class="page-header">
-        <nav class="page-header__nav">
-            <a href="/" class="logo">
-                <img class="logo__img" src="img/shape.svg" alt="Лого">
-                <img src="img/Check%20&%20Mate.svg" alt="Текст-лого">
-            </a>
-            <ul class="page-header__nav-list">
-                <li class="page-header__nav-item"><a class="page-header__nav-link page-header__nav-link--active" href="#">Игра</a></li>
-                <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">История</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header class="header">
+            <nav class="header__nav">
+                <a class="logo">
+                    <img class="logo__img" src="img/logo.svg" alt="Лого Check & Mate">
+                </a>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a class="header__nav-link header__nav-link--active">Игра</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">История</a></li>
+                </ul>
+            </nav>
+            <div class="line"></div>
+        </header>
     <main class="main main-play">
+        <h1 class="visually-hidden">Игра Check & Mate</h1>
         <div class="background-wrapper">
             <div class="background-ellipse-3 background-ellipse-3--play-left" ></div>
             <div class="background-ellipse-3 background-ellipse-3--play-right" ></div>
@@ -34,105 +34,109 @@
         </div>
         <div class="players">
             <div class="players__player players__player--black">
-                <div class="players__color-icon players__color-icon--black"></div>
+                <h2 class="visually-hidden">Игрок Черными</h2>
+                <div class="players__color-icon players__color-icon--black"><span class="visually-hidden">Шахматная фигура черного цвета</span></div>
                 <div class="players__user-data">
-                    <p class="players__name">Екатерина Иванцова</p>
-                    <p class="players__rating">2431</p>
+                    <p class="players__name">Екатерина Иванцова<span class="visually-hidden">Игрок черными фигурами</span></p>
+                    <p class="players__rating">2431<span class="visually-hidden">Рейтинг игрока черными фигурами</span></p>
                 </div>
-                <p class="players__time">25:13</p>
+                <time class="players__time">25:13<span class="visually-hidden">Время игрока черными фигурами</span></time>
             </div>
             <div class="players__player players__player--white">
-                <div class="players__color-icon players__color-icon--white"></div>
+                <h2 class="visually-hidden">Игрок Белыми</h2>
+                <div class="players__color-icon players__color-icon--white"><span class="visually-hidden">Шахматная фигура белого цвета</span></div>
                 <div class="players__user-data">
-                    <p class="players__name">Владимир Колесников</p>
-                    <p class="players__rating">3871</p>
+                    <p class="players__name">Владимир Колесников<span class="visually-hidden">Игрок белыми фигурами</span></p>
+                    <p class="players__rating">3871<span class="visually-hidden">Рейтинг игрока белыми фигурами</span></p>
                 </div>
-                <p class="players__time">23:15</p>
+                <time class="players__time">23:15<span class="visually-hidden">Время игрока белыми фигурами</span></time>
             </div>
         </div>
-        <table class="chess-board">
+        <div class="chess-board-wrapper">
+            <table class="chess-board">
             <tr class="chess-board__row">
-                <td class="chess-board__td chess-board__td--black-rook"><span class="chess-board__td-number">8</span></td>
-                <td class="chess-board__td chess-board__piece chess-board__td--black-knight"></td>
-                <td class="chess-board__td chess-board__td--black-bishop"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--black-king"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--black-rook"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-rook"><span class="visually-hidden">Черная ладья</span><span class="chess-board__td-number">8</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__piece chess-board__td--black-knight"><span class="visually-hidden">Черный конь</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-bishop"><span class="visually-hidden">Черный слон</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-king"><span class="visually-hidden">Черный король</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-rook"><span class="visually-hidden">Черная ладья</span></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td chess-board__td--black-pawn"><span class="chess-board__td-number">7</span></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span><span class="chess-board__td-number">7</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td"><span class="chess-board__td-number">6</span></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
-                <td class="chess-board__td chess-board__td--black-knight"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-number">6</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-knight"><span class="visually-hidden">Черный конь</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td"><span class="chess-board__td-number">5</span></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--black-queen"></td>
-                <td class="chess-board__td chess-board__td--black-pawn"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-number">5</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-queen"><span class="visually-hidden">Черная королева</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-pawn"><span class="visually-hidden">Черная пешка</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td"><span class="chess-board__td-number">4</span></td>
-                <td class="chess-board__td chess-board__td--black-bishop"></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-number">4</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--black-bishop"><span class="visually-hidden">Черный слон</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td chess-board__td--white-pawn"><span class="chess-board__td-number">3</span></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--white-knight"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span><span class="chess-board__td-number">3</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-knight"><span class="visually-hidden">Белый конь</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td"></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td"><span class="chess-board__td-number">2</span></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
-                <td class="chess-board__td chess-board__td--white-queen"></td>
-                <td class="chess-board__td chess-board__td--white-bishop"></td>
-                <td class="chess-board__td"></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
-                <td class="chess-board__td chess-board__td--white-pawn"></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-number">2</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-queen"><span class="visually-hidden">Белая королева</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-bishop"><span class="visually-hidden">Белый слон</span></td>
+                <td tabindex="0" class="chess-board__td"></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-pawn"><span class="visually-hidden">Белая пешка</span></td>
             </tr>
             <tr class="chess-board__row">
-                <td class="chess-board__td chess-board__td--white-rook"><span class="chess-board__td-number">1</span><span class="chess-board__td-letter">a</span></td>
-                <td class="chess-board__td"><span class="chess-board__td-letter">b</span></td>
-                <td class="chess-board__td"><span class="chess-board__td-letter">c</span></td>
-                <td class="chess-board__td"><span class="chess-board__td-letter">d</span></td>
-                <td class="chess-board__td chess-board__td--white-king"><span class="chess-board__td-letter">e</span></td>
-                <td class="chess-board__td chess-board__td--white-bishop"><span class="chess-board__td-letter">f</span></td>
-                <td class="chess-board__td chess-board__td--white-knight"><span class="chess-board__td-letter">g</span></td>
-                <td class="chess-board__td chess-board__td--white-rook"><span class="chess-board__td-letter">h</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-rook"><span class="visually-hidden">Белая ладья</span><span class="chess-board__td-number">1</span><span class="chess-board__td-letter">a</span></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-letter">b</span></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-letter">c</span></td>
+                <td tabindex="0" class="chess-board__td"><span class="chess-board__td-letter">d</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-king"><span class="visually-hidden">Белый король</span><span class="chess-board__td-letter">e</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-bishop"><span class="visually-hidden">Белый слон</span><span class="chess-board__td-letter">f</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-knight"><span class="visually-hidden">Белый конь</span><span class="chess-board__td-letter">g</span></td>
+                <td tabindex="0" class="chess-board__td chess-board__td--white-rook"><span class="visually-hidden">Белая ладья</span><span class="chess-board__td-letter">h</span></td>
             </tr>
         </table>
-        <div class="game-data-wrapper">
+        </div>
+        <div class="game-history-wrapper">
             <div class="chess-moves-wrapper">
                 <table class="chess-moves">
                 <tr class="chess-moves__row">
@@ -207,20 +211,23 @@
                 </tr>
             </table>
             </div>
-            <div class="impossible-move">
-                <p class="impossible-move__text">Невозможный ход</p>
-            </div>
-            <div class="game-data">
-                <button class="game-data__button game-data__button--flag"></button>
-                <button class="game-data__button game-data__button--score"></button>
-                <button class="game-data__button game-data__button--back"></button>
+            <ul class="message-block">
+                <li class="message-block__text">Невозможный ход</li>
+            </ul>
+            <div class="game-history">
+                <button type="button" class="game-history__button game-history__button--flag"><p class="visually-hidden">Сдаться ничью</p></button>
+                <button type="button" class="game-history__button game-history__button--score"><p class="visually-hidden">Предложить</p></button>
+                <button type="button" class="game-history__button game-history__button--back"><p class="visually-hidden">Перезапустить игру</p></button>
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <span class="footer__text">Chess&Mate © 2021 Все права защищены</span>
-        <span class="footer__text"><a class="footer__link" href="#">Политика конфиденциальности</a></span>
-    </footer>
+        <div class="footer-wrapper">
+            <div class="line"></div>
+            <footer class="footer">
+                <p class="footer__text">Chess&Mate © 2021 Все права защищены</p>
+                <p class="footer__text"><a class="footer__link" href="#">Политика конфиденциальности</a></p>
+            </footer>
+        </div>
 </div>
 </body>
 </html>
