@@ -27,7 +27,6 @@
 .header {
     height: 105px;
     padding: 0;
-    /*border-bottom: rgba(235, 235, 235, 0.1) 1px solid;*/
 }
 
 .header__nav {
@@ -104,11 +103,6 @@
     padding-left: 50px;
 }
 
-/*.column-wrapper {*/
-/*    display: flex;*/
-/*    margin-top: 30px;*/
-/*}*/
-
 .form {
     width: 650px;
     display: flex;
@@ -177,7 +171,6 @@
 .button {
     width: 370px;
     height: 58px;
-    /*margin-top: 25px;*/
     padding: 21px;
     font-size: 16px;
     font-weight: 500;
@@ -519,14 +512,12 @@
 }
 
 .chess-moves-wrapper {
-    /*max-width: 270px;*/
     max-height: 392px;
     margin-bottom: 10px;
     overflow: scroll;
 }
 
 .chess-moves {
-    /*width: 270px;*/
     height: 392px;
     border-collapse: collapse;
     background-color: rgba(11, 15, 23, 0.5);
