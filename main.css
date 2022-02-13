@@ -20,8 +20,12 @@
 
 .main {
     position: relative;
-    padding-top: 65px;
+    padding-top: 60px;
     padding-bottom: 68px;
+}
+
+.content-wrapper {
+    width: 640px;
 }
 
 .header {
@@ -72,12 +76,23 @@
     object-fit: contain;
     object-position: left;
 }
+
 .line {
     width: 1400px;
     height: 1px;
-    background-color: rgba(235, 235, 235, 0.1);
     margin: 0 0 0 -115px;
+    background-color: rgba(235, 235, 235, 0.1);
 }
+
+.line--vertically {
+    position: absolute;
+    top: 205px;
+    left: 180px;
+    width: 276px;
+    margin: 0;
+    transform: rotate(90deg);
+}
+
 .first-header {
     color: #EBEBEB;
     font-weight: 500;
@@ -89,7 +104,7 @@
     color: #D8D8D8;
     font-size: 18px;
     font-weight: 400;
-    margin: 0 0 55px 0;
+    margin: 8px 0 50px 0;
 }
 
 .second-header {
@@ -99,11 +114,20 @@
     margin: 0 0 20px 0;
 }
 
-.second-header--black {
+.row-wrapper {
+    padding: 0 0 10px 0;
+}
+
+.row-wrapper--left {
+    padding-right: 50px;
+}
+
+.row-wrapper--right {
     padding-left: 50px;
 }
 
 .form {
+    position: relative;
     width: 650px;
     display: flex;
     flex-wrap: wrap;
@@ -123,31 +147,22 @@
     display: flex;
     width: 270px;
     padding: 0;
-    margin: 0 0 12px 0;
+    margin: 0;
     flex-direction: column;
     list-style: none;
-}
-
-.form__list--first {
-    border-right: rgba(235, 235, 235, 0.2) 1px solid;
-    padding-right: 50px;
-}
-
-.form__list--second {
-    padding-left: 50px;
 }
 
 .form__item {
     display: flex;
     flex-direction: column;
-    margin: 0 0 6px 0;
+    margin: 0 0 20px 0;
 }
 
 .form__input {
     width: 100%;
     height: 48px;
     padding: 5px 10px;
-    margin: 12px 0;
+    margin: 12px 0 0 0;
     box-sizing: border-box;
     font-size: 16px;
     color: #D8D8D8;
@@ -168,9 +183,15 @@
     color: #D8D8D8;
 }
 
-.button {
+.button__wrapper {
     width: 370px;
     height: 58px;
+    margin: 0;
+}
+
+.button {
+    width: 100%;
+    height: auto;
     padding: 21px;
     font-size: 16px;
     font-weight: 500;
@@ -292,6 +313,7 @@
     font-weight: 400;
     color: #D8D8D8;
     opacity: 80%;
+    margin: 0;
 }
 
 .footer__link {
@@ -322,9 +344,10 @@
 
 .main-play {
     display: flex;
+    padding-top: 65px;
 }
 
-.chess-board-wrapper {
+.chess-board--wrapper {
     margin: 0 15px;
 }
 
@@ -346,10 +369,6 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-
-.chess-board__td:focus {
-    border: 1px solid #2364E2;
 }
 
 .chess-board__td--black-pawn {
@@ -441,6 +460,21 @@
 .chess-board__row:nth-child(7) .chess-board__td:nth-child(even),
 .chess-board__row:nth-child(8) .chess-board__td:nth-child(odd) {
     background-color: #737780;
+}
+
+.chess-board__td:focus {
+    background-color: #2364E2;
+}
+
+.chess-board__row:nth-child(1) .chess-board__td:nth-child(even):focus,
+.chess-board__row:nth-child(2) .chess-board__td:nth-child(odd):focus,
+.chess-board__row:nth-child(3) .chess-board__td:nth-child(even):focus,
+.chess-board__row:nth-child(4) .chess-board__td:nth-child(odd):focus,
+.chess-board__row:nth-child(5) .chess-board__td:nth-child(even):focus,
+.chess-board__row:nth-child(6) .chess-board__td:nth-child(odd):focus,
+.chess-board__row:nth-child(7) .chess-board__td:nth-child(even):focus,
+.chess-board__row:nth-child(8) .chess-board__td:nth-child(odd):focus {
+    background-color: #2364E2;
 }
 
 .players__player {
@@ -616,11 +650,11 @@
     margin: 0;
 }
 
-.game-history {
+.game-controls {
     display: flex;
 }
 
-.game-history__button {
+.game-controls__button {
     width: 70px;
     height: 70px;
     border: 1px solid #2364E2;
@@ -633,33 +667,33 @@
     cursor: pointer;
 }
 
-.game-history__button:hover {
+.game-controls__button:hover {
     border: 1px solid rgba(35, 100, 226, 0.6);
     transition: .1s linear;
 }
-.game-history__button:active {
+.game-controls__button:active {
     border: 1px solid #0b64e2;
 }
 
-.game-history__button:first-child {
+.game-controls__button:first-child {
     margin-left: 0;
 }
 
-.game-history__button:last-child  {
+.game-controls__button:last-child  {
     margin-right: 0;
 }
 
-.game-history__button--flag {
+.game-controls__button--flag {
     background-image: url("img/flag.svg");
     background-size: 22px 24px;
 }
 
-.game-history__button--score {
+.game-controls__button--score {
     background-image: url("img/score.svg");
     background-size: 24px 18px;
 }
 
-.game-history__button--back {
+.game-controls__button--back {
     background-image: url("img/moveback.svg");
     background-size: 27px 24px;
 }

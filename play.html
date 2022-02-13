@@ -13,7 +13,7 @@
         <header class="header">
             <nav class="header__nav">
                 <a class="logo">
-                    <img class="logo__img" src="img/logo.svg" alt="Лого Check & Mate">
+                    <img class="logo__img" src="img/logo.svg" width="170" height="45" alt="Лого Check & Mate">
                 </a>
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a class="header__nav-link header__nav-link--active">Игра</a></li>
@@ -52,8 +52,7 @@
                 <time class="players__time">23:15<span class="visually-hidden">Время игрока белыми фигурами</span></time>
             </div>
         </div>
-        <div class="chess-board-wrapper">
-            <table class="chess-board">
+            <table class="chess-board chess-board--wrapper">
             <tr class="chess-board__row">
                 <td tabindex="0" class="chess-board__td chess-board__td--black-rook"><span class="visually-hidden">Черная ладья</span><span class="chess-board__td-number">8</span></td>
                 <td tabindex="0" class="chess-board__td chess-board__piece chess-board__td--black-knight"><span class="visually-hidden">Черный конь</span></td>
@@ -135,14 +134,13 @@
                 <td tabindex="0" class="chess-board__td chess-board__td--white-rook"><span class="visually-hidden">Белая ладья</span><span class="chess-board__td-letter">h</span></td>
             </tr>
         </table>
-        </div>
         <div class="game-history-wrapper">
             <div class="chess-moves-wrapper">
                 <table class="chess-moves">
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">1</td>
                     <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>d4</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"></span>f6</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"><span class="visually-hidden">Конь</span></span>f6</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">2</td>
@@ -151,23 +149,23 @@
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">3</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"></span>c3</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>b4</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--knight"><span class="visually-hidden">Конь</span></span>c3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"><span class="visually-hidden">Слон</span></span>b4</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">4</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>c2</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"><span class="visually-hidden">Королева</span></span>c2</td>
                     <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>c5</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">5</td>
                     <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>dxc5</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>a5</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"><span class="visually-hidden">Королева</span></span>a5</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">6</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>d2</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"></span>xc5</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"><span class="visually-hidden">Слон</span></span>d2</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--queen"><span class="visually-hidden">Королева</span></span>xc5</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">7</td>
@@ -177,7 +175,7 @@
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">8</td>
                     <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon"></span>a3</td>
-                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"></span>xc3</td>
+                    <td class="chess-moves__td chess-moves__td--move"><span class="chess-shape-icon chess-shape-icon--bishop"><span class="visually-hidden">Слон</span></span>xc3</td>
                 </tr>
                 <tr class="chess-moves__row">
                     <td class="chess-moves__td chess-moves__td--number">9</td>
@@ -214,10 +212,10 @@
             <ul class="message-block">
                 <li class="message-block__text">Невозможный ход</li>
             </ul>
-            <div class="game-history">
-                <button type="button" class="game-history__button game-history__button--flag"><p class="visually-hidden">Сдаться ничью</p></button>
-                <button type="button" class="game-history__button game-history__button--score"><p class="visually-hidden">Предложить</p></button>
-                <button type="button" class="game-history__button game-history__button--back"><p class="visually-hidden">Перезапустить игру</p></button>
+            <div class="game-controls">
+                <button type="button" class="game-controls__button game-controls__button--flag"><span class="visually-hidden">Сдаться ничью</span></button>
+                <button type="button" class="game-controls__button game-controls__button--score"><span class="visually-hidden">Предложить</span></button>
+                <button type="button" class="game-controls__button game-controls__button--back"><span class="visually-hidden">Перезапустить игру</span></button>
             </div>
         </div>
     </main>
