@@ -24,6 +24,13 @@
     padding-bottom: 68px;
 }
 
+.main__text {
+    color: #D8D8D8;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 8px 0 50px 0;
+}
+
 .content-wrapper {
     width: 640px;
 }
@@ -93,18 +100,11 @@
     transform: rotate(90deg);
 }
 
-.first-header {
+.create-game-header {
     color: #EBEBEB;
     font-weight: 500;
     font-size: 50px;
     margin: 0;
-}
-
-.subscription {
-    color: #D8D8D8;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 8px 0 50px 0;
 }
 
 .second-header {
@@ -502,7 +502,7 @@
 }
 
 .players__player--black .players__time {
-    margin-top: 28px;
+    margin-top: 48px;
 }
 
 .players__name {
@@ -512,7 +512,7 @@
 
 .players__rating {
     font-size: 16px;
-    margin: 5px 0 16px 0;
+    margin: 5px 0 0 0;
 }
 
 .players__time {
@@ -524,6 +524,7 @@
 .players__color-icon {
     min-height: 70px;
     width: 70px;
+    margin: 10px 0;
     border-radius: 50%;
     border: #EBEBEB 1px solid;
     background-repeat: no-repeat;
@@ -537,7 +538,6 @@
 
 .players__color-icon--black {
     background-image: url("img/black.svg");
-    margin: 10px 0;
 }
 
 .game-history-wrapper {
