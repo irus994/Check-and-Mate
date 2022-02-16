@@ -139,30 +139,30 @@
     padding: 0;
 }
 
-.form__fieldset--time {
-    margin-bottom: 30px;
-}
-
 .form__list {
     display: flex;
     width: 270px;
+    height: 285px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
     flex-direction: column;
+    justify-content: space-between;
     list-style: none;
+}
+
+.form__list--time {
+    height: 112px;
 }
 
 .form__item {
     display: flex;
     flex-direction: column;
-    margin: 0 0 20px 0;
 }
 
 .form__input {
     width: 100%;
     height: 48px;
     padding: 5px 10px;
-    margin: 12px 0 0 0;
     box-sizing: border-box;
     font-size: 16px;
     color: #D8D8D8;
@@ -178,6 +178,7 @@
 }
 
 .form__label {
+    margin: 0 0 12px 0;
     font-weight: 400;
     font-size: 16px;
     color: #D8D8D8;
