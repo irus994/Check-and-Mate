@@ -631,24 +631,32 @@
     background-size: 8px 13px;
 }
 
-.message-block {
+.message-block-wrapper {
     height: 98px;
-    list-style: none;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    overflow: scroll;
     border: rgba(235, 235, 235, 0.2) 1px solid;
     background-color: rgba(11, 15, 23, 0.5);
     box-sizing: border-box;
-    padding: 15px 15px;
-    margin-bottom: 30px;
-    overflow: scroll;
+
+}
+
+.message-block {
+    height: 100%;
+    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .message-block__text {
     font-size: 16px;
     font-weight: 400;
-    margin: 0;
+    padding: 0 15px;
 }
 
 .game-controls {
